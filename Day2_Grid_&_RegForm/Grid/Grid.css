@@ -1,0 +1,58 @@
+#aTag nav a
+{
+    padding: 18px;
+}
+#lAd
+{
+    height: 1100px;
+    background-color: teal;
+    overflow: hidden;
+}
+#rAd
+{
+    height: 1100px;
+    background-color: teal;
+    overflow: hidden;
+}
+#fImg
+{
+    width: 450px;
+    margin-left: 30px;
+}
+#sImg
+{
+    width: 300px;
+    height: 200px;
+    padding-right: 80px;
+    
+}
+#fdContent1 p
+{
+    font-family: cursive;
+    padding: 25px;
+    margin-left: 5px;
+}
+#fdContent2 img
+{
+    padding-top: 20px;
+    width: 150px;
+    height: 150px;
+}
+#border
+{
+    border-right: 1px dotted black;
+    height: 900px;
+    padding-right: 50px;
+    margin-right: 20px;
+}
+#dImg
+{
+    width: 150px;
+    height: 100px;
+    padding-right: 2px;
+}
+#sdContent p
+{
+    font-family: cursive;
+    text-align: center;
+}

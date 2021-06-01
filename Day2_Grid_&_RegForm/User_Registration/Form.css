@@ -1,0 +1,38 @@
+
+#head
+{
+    font-family: 'Courier New', Courier, monospace;
+    color:black;
+}
+label
+{
+    padding-bottom: 10px;
+    text-align: right;
+    width: 250px;
+}
+input
+{
+    text-align: left;
+    width: 300px;
+}
+#form
+{
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: papayawhip;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid brown;
+}
+#sub
+{
+    margin-top: 20px;
+    background-color: rgb(155, 221, 155);
+    color: black;
+}
+#can
+{
+    background-color: rgb(194, 124, 124);
+    color: black;
+}

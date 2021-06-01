@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Form.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script>
+        alert("Fill the Form Correctly");
+        function displayAlert()
+        {
+            var x=10;
+            var fn=document.getElementById("fName").value;
+            var ln=document.getElementById("lName").value;
+            var eOp=document.getElementById("eMail").value;
+            var db=document.getElementById("dob").value;
+            var pW=document.getElementById("psw").value;
+            
+
+            if(fn<=0)
+            {
+                alert("Enter Valid Name");
+                return false;
+            }
+            
+            if(pW.length<4 || pW.length>8)
+            {
+                alert("Your Password length should be 4 to 6");
+                return false;
+            }
+            
+            console.log(document.getElementById("fn"));
+            console.log(document.getElementById("fn").value);
+            console.log(x);
+        }
+    </script>
+
+</head>
+<body>
+    <div class="row" >
+        <div class="col-md-12" style="text-align: center;">
+             <h1 id="head">User Registration</h1>   
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="form">
+            <form>
+                <label for="fName"><b>First Name : </b></label>
+                <input  type="text" placeholder="First name" name="fName" id="fName" required>
+                <br>
+
+                <label for="lName"><b>Last Name : </b></label>
+                <input type="text" placeholder="Last name" name="lName" id="lName" required>
+                <br>
+
+                <label for="eMail"><b>Email or Phno. : </b></label>
+                <input type="text" placeholder="Enter Email or Phonenumber" name="eMail" id="eMail" required>
+                <br>
+
+                <label for="dob"><b>Date of Birth : </b></label>
+                <input type="date" placeholder="Date of Birth" name="dob" id="dob" required>
+                <br>
+
+                <label for="psw"><b>Password : </b></label>
+                <input type="password" placeholder="Password" name="psw" id="psw" required>
+                <br>
+
+                <button id="sub" onclick="displayAlert()">Submit</button>
+                <button id="can">Cancel</button>
+            </form>
+        </div>
+    <div class="col-md-2"></div>
+    </div>
+</body>
+</html>
