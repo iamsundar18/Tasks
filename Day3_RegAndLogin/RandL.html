@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="RandL.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script>
+        alert("Fill the form correctly");
+
+        var studentsData = [];
+        function displayAlert() {
+            var fn = document.getElementById("fName").value;
+            var ln = document.getElementById("lName").value;
+            var eOp = document.getElementById("eMail").value;
+            var db = document.getElementById("dob").value;
+            var pW = document.getElementById("psw").value;
+
+            console.log(document.getElementById("lName").value);
+
+            var student = {};
+            student.firstName = fn;
+            student.lastName = ln;
+            student.dob = db;
+            student.mail = eOp;
+            student.pass = pW;
+
+            studentsData.push(student);
+            console.log(studentsData);
+
+            if (fn <= 0) {
+                alert("Enter Valid Name");
+                return false;
+            }
+
+            if (pW.length > 8) {
+                alert("Your Password length should be 8");
+                return false;
+            }
+        }
+        function cheking() {
+            var leOp = document.getElementById("eMaill").value;
+            var lpW = document.getElementById("pswl").value;
+
+            var isUserPresent = false;
+            var isPasswordPresent = false;
+
+            for (var i = 0; i < studentsData.length; i++) {
+                if (studentsData[i].mail == leOp) {
+                    isUserPresent = true;
+                    if (studentsData[i].pass == lpW) {
+                        isPasswordPresent = true;
+                        break;
+                    }
+                }
+
+            }
+            if (isUserPresent && isPasswordPresent) alert("Login Successfull")
+            else if (isUserPresent && !isPasswordPresent) alert("Please enter correct password")
+            else alert("Enter Valid Details")
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <h1 id="head">Registration and Login</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6" id="form">
+            <form name="userReg">
+                <label for="eMail"><b>Email or Phno. : </b></label>
+                <input type="text" placeholder="Enter Email or Phonenumber" name="eMail" id="eMaill" required>
+                <br>
+
+                <label for="psw"><b>Password : </b></label>
+                <input type="password" placeholder="Password" name="psw" id="pswl" required>
+                <br>
+
+                <button type="button" id="subl" onclick="cheking()">Login</button>
+                <button type="reset" id="canl">Cancel</button>
+            </form>
+        </div>
+
+
+        <div class="col-md-6" id="form">
+            <form name="userReg">
+                <label for="fName"><b>First Name : </b></label>
+                <input type="text" placeholder="First name" name="fName" id="fName" required>
+                <br>
+
+                <label for="lName"><b>Last Name : </b></label>
+                <input type="text" placeholder="Last name" name="lName" id="lName" required>
+                <br>
+
+                <label for="eMail"><b>Email or Phno. : </b></label>
+                <input type="text" placeholder="Enter Email or Phonenumber" name="eMail" id="eMail" required>
+                <br>
+
+                <label for="dob"><b>Date of Birth : </b></label>
+                <input type="date" placeholder="Date of Birth" name="dob" id="dob" required>
+                <br>
+
+                <label for="psw"><b>Password : </b></label>
+                <input type="password" placeholder="Password" name="psw" id="psw" required>
+                <br>
+
+                <button type="button" id="sub" onclick="displayAlert()">Register</button>
+                <button id="can">Cancel</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

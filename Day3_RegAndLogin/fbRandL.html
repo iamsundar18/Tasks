@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Reg and Login</title>
+    <link rel="stylesheet" href="fbRandL.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12" id="head"> facebook </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <form id="form">
+                        <label for="eMail"></label>
+                        <input type="text" placeholder="Enter Email or Phonenumber" name="eMail" id="eMaill" required>
+                        <br>
+
+                        <label for="psw"><b></b></label>
+                        <input type="password" placeholder="Password" name="psw" id="pswl" required>
+                        <br>
+
+                        <button type="button" id="subl" onclick="cheking()">Sign in</button>
+                        <p class="para"><a href="#">Already have an account?</a> </p>
+                        <button type="button" id="new">Create New Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <form id="form2">
+                        <h2>Sign up</h1><br>
+                            <p>it's quick and easy.</p><br>
+                            <hr>
+                            <input type="text" placeholder="First Name" name="fn" id="fn" required>
+                            <input type="text" placeholder="Surname" name="sn" id="sn" required>
+                            <br>
+                            <input type="text" placeholder="Mobile number or email address" name="more" id="more"
+                                required>
+                            <input type="password" placeholder="New passWord" name="more" id="more" required>
+                            <input type="date" placeholder="Date of Birth" name="more" id="more" required>
+                            <input type="password" placeholder="New passWord" name="more" id="more" required>
+                            <input type="radio" id="Gen" name="Gen" value="Male">
+                            <label for="Gen">Male</label>
+                            <input type="radio" id="Gen" name="Gen" value="Female">
+                            <label for="Gen">Female</label>
+                            <input type="radio" id="Gen" name="Gen" value="Custom">
+                            <label for="Gen">Custom</label>
+                            <button type="button" id="subl" onclick="cheking()">Sign in</button>
+                            <p class="para"><a href="#">Already have an account?</a> </p>
+                            <button type="button" id="new">Create New Account</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
