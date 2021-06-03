@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Reg and Login</title>
+    <link rel="stylesheet" href="fbRandL.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script>
+        alert("Welcome to facebook...");
+
+        var usersData = [];
+        function storingDetails() {
+            var fna = document.getElementById("fn").value;
+            var lna = document.getElementById("sn").value;
+            var eOp = document.getElementById("more").value;
+            var pW = document.getElementById("pass").value;
+            var db = document.getElementById("dob").value;
+            var gen = document.getElementsByName('Gen').value;
+
+
+            var user = {};
+            user.firstName = fna;
+            user.lastName = lna;
+            user.eop = eOp;
+            user.passw = pW;
+            user.dobi = db;
+            user.gender = gen;
+
+
+            usersData.push(user);
+            console.log(usersData);
+
+            if (fna == 0) {
+                alert("Enter Valid Name");
+                return false;
+            }
+
+            if (pW.length > 8) {
+                alert("Your Password length should be 8");
+                return false;
+            }
+        }
+        function cheking() {
+            var leOp = document.getElementById("eMaill").value;
+            var lpW = document.getElementById("pswl").value;
+
+            var isUserPresent = false;
+            var isPasswordPresent = false;
+
+            for (var i = 0; i < usersData.length; i++) {
+                if (usersData[i].eop == leOp) {
+                    isUserPresent = true;
+                    if (usersData[i].passw == lpW) {
+                        isPasswordPresent = true;
+                        break;
+                    }
+                }
+
+            }
+            if (isUserPresent && isPasswordPresent) alert("Login Successfull")
+            else if (isUserPresent && !isPasswordPresent) alert("Please enter correct password")
+            else alert("Enter Valid Details")
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12" id="head"> facebook </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <form id="form">
+                        <label for="eMail"></label>
+                        <input type="text" placeholder="Enter Email or Phonenumber" name="eMail" id="eMaill" required>
+                        <br>
+
+                        <label for="psw"><b></b></label>
+                        <input type="password" placeholder="Password" name="psw" id="pswl" required>
+                        <br>
+
+                        <button type="button" id="subl" onclick="cheking()">Sign in</button>
+                        <p class="para"><a href="#">Already have an account?</a> </p>
+                        <button id="new">Create New Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <form id="form2">
+                        <h2 id="sgnup">Sign up</h1><br>
+                            <p>it's quick and easy.</p><br>
+
+                            <input type="text" placeholder="First Name" name="fn" id="fn" required>
+                            <input type="text" placeholder="Surname" name="sn" id="sn" required>
+                            <br>
+                            <input type="text" placeholder="Mobile number or email address" name="more" id="more"
+                                required><br>
+
+                            <input type="password" placeholder="New passWord" name="pass" id="pass" required><br>
+                            <input type="date" placeholder="Date of Birth" name="dob" id="dob" required><br>
+
+                            <input type="radio" id="Gen1" name="Gen" value="Male">
+                            <label class="Gen1" for="Gen">Male</label><br>
+                            <input type="radio" id="Gen2" name="Gen" value="Female">
+                            <label class="Gen1" for="Gen">Female</label><br>
+                            <input type="radio" id="Gen3" name="Gen" value="Custom">
+                            <label class="Gen1" for="Gen">Custom</label><br>
+                            <button type="button" id="subr" onclick="storingDetails()">Sign up</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
