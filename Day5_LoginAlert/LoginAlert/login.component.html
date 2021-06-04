@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h3>Login here...</h3>
+        <form class="form">
+            <label for="eop"></label>
+            <input type="text" #em id="eop" placeholder="Enter mail or Phone number"><br>
+            <label for="pass"></label>
+            <input type="password" id="pass" placeholder="Password"><br>
+            <button type="button" (click)="showText(em.value)" class="sub">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

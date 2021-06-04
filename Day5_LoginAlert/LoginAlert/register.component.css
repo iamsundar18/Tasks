@@ -1,0 +1,44 @@
+p
+{
+    text-align: center;
+}
+h3
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: #a06f1f;
+    margin-top: 40px;
+}
+.form
+{
+    
+    padding: 20px;
+    height: 330px;
+    width: 400px;
+    background-color: azure;
+    border-radius: 10px;
+    border:2px solid black;
+}
+input
+{
+    margin-left: 50px;
+    width: 250px;
+    margin-top: 22px;
+    border-radius: 8px;
+}
+.reg
+{
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 70px;
+    color: white;
+    background-color: #5b6d5b;
+    border-radius:8px;
+}
+.can
+{
+    width: 80px;
+    color: white;
+    margin-left: 50px;
+    border-radius:8px;
+    background-color: #fb3640;
+}
