@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-5">
+        <h3>Register here...</h3>
+        <form class="form" #reg="ngForm">
+            <input type="text" placeholder="First Name" name="fName" ngModel><br>
+            <input type="text" placeholder="Last Name" name="lName" ngModel><br>
+            <input type="text" placeholder="Mail or Phone" name="mop" ngModel><br>
+            <input type="password" placeholder="New Password" name="pass" ngModel><br>
+            <button type="button" class="reg" (click)="onReg(reg.value)">Register</button>
+            <button type="button" class="can">Cancel</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
