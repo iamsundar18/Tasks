@@ -1,0 +1,55 @@
+#form
+{
+    background-color:ivory;
+    margin-top: 60px;
+    width: 700px;
+    height: 630px;
+    border-radius: 15px;
+    margin-left: 550px;
+    border-color: gray;
+}
+input
+{
+    font-family: cursive;
+    font-size: 18px;
+    border-radius: 8px;
+    border-color: gray;
+    height: 40px;
+    margin-left: 75px;
+    width: 510px;
+}
+button
+{
+    margin-left: 150px;
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 8px;
+}
+#can
+{
+    color: white;
+    background-color: rgb(95, 89, 89);
+}
+#log
+{
+    color: white;
+    background-color: rgb(216, 40, 75);
+}
+/* small
+{
+    font-size: 15px;
+    margin-left: 80px;
+} */
+label
+{
+    font-family: cursive;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-left: 80px;
+}
+.alert
+{
+    font-family: cursive;
+    margin-left: 65px;
+    color: red;
+}

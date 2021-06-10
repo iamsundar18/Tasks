@@ -1,0 +1,10 @@
+button
+{
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+    margin-left: 360px;
+    border-radius: 8px;
+    width: 120px;
+    background-color: rgb(216, 40, 75);
+}
