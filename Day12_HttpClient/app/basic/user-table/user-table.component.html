@@ -1,0 +1,126 @@
+<div>
+    <h2 class="det">User Details</h2>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>E-mail</th>
+                    <th>Phone Number</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                    <th>Qualification</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{loc.fname}}</td>
+                    <td>{{loc.lname}}</td>
+                    <td>{{loc.mail}}</td>
+                    <td>{{loc.pnum}}</td>
+                    <td>{{loc.pass}}</td>
+                    <td>{{loc.gender}}</td>
+                    <td>{{loc.qul}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<div class="row">
+    <div>
+        <button type="button" class="btn btn-primary" id="gb" (click)="goBack()">Go back</button>
+        <button type="button" class="btn btn-success" id="ei" (click)="editInfo()">Edit Info</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div *ngIf="detail">
+            <h2>{{detail.fname | uppercase}} Details</h2>
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <form class="edit">
+                    <div class="form-group">
+                        <label for="fname">First name</label>
+                        <input type="text" name="fname" class="form-control" [(ngModel)]="detail.fname"
+                            placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last name</label>
+                        <input type="text" name="lname" class="form-control" [(ngModel)]="detail.lname"
+                            placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">E-mail</label>
+                        <input type="email" name="mail" class="form-control" [(ngModel)]="detail.mail"
+                            placeholder="Mail-ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="pnum">Phone Number</label>
+                        <input type="number" name="pnum" class="form-control" [(ngModel)]="detail.pnum"
+                            placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" class="form-control" [(ngModel)]="detail.pass"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" class="form-control">
+                            <option *ngFor="let g of gend" [value]="g">{{g}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="qul">Qualification</label>
+                        <input type="text" name="qul" class="form-control" [(ngModel)]="detail.qul"
+                            placeholder="Qualification">
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-success" (click)="updInfo()">Update Info</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-outline-danger" id="btnget" (click)="openFakeDate()">Get Fake Data</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Fake Data</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>UserID</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let data of fakedData">
+                    <td>{{data.userId}}</td>
+                    <td>{{data.id}}</td>
+                    <td>{{data.title}}</td>
+                    <td>{{data.completed}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
