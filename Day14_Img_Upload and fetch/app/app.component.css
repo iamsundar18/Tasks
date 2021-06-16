@@ -1,0 +1,21 @@
+h1
+{
+   padding: 30px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    font-family:perpetua;
+    font-size: 60px;
+    
+}
+img
+{
+    width: 780px;
+    margin-left: 500px;
+    margin-top: 150px;
+}
+#head
+{
+    height: 150px;
+   background-image: url("https://c4.wallpaperflare.com/wallpaper/834/602/559/computer-keyboards-wallpaper-preview.jpg");
+}
