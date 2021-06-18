@@ -1,0 +1,226 @@
+<div>
+    <h2 class="det">User Details</h2>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>E-mail</th>
+                    <th>Phone Number</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                    <th>Qualification</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{loc.fname}}</td>
+                    <td>{{loc.lname}}</td>
+                    <td>{{loc.mail}}</td>
+                    <td>{{loc.pnum}}</td>
+                    <td>{{loc.pass}}</td>
+                    <td>{{loc.gender}}</td>
+                    <td>{{loc.qul}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<div class="row">
+    <div>
+        <button type="button" class="btn btn-primary" id="gb" (click)="goBack()">Go back</button>
+        <button type="button" class="btn btn-success" id="ei" (click)="editInfo()">Edit Info</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div *ngIf="detail">
+            <h2>{{detail.fname | uppercase}} Details</h2>
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <form class="edit">
+                    <div class="form-group">
+                        <label for="fname">First name</label>
+                        <input type="text" name="fname" class="form-control" [(ngModel)]="detail.fname"
+                            placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last name</label>
+                        <input type="text" name="lname" class="form-control" [(ngModel)]="detail.lname"
+                            placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">E-mail</label>
+                        <input type="email" name="mail" class="form-control" [(ngModel)]="detail.mail"
+                            placeholder="Mail-ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="pnum">Phone Number</label>
+                        <input type="number" name="pnum" class="form-control" [(ngModel)]="detail.pnum"
+                            placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" class="form-control" [(ngModel)]="detail.pass"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" class="form-control">
+                            <option *ngFor="let g of gend" [value]="g">{{g}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="qul">Qualification</label>
+                        <input type="text" name="qul" class="form-control" [(ngModel)]="detail.qul"
+                            placeholder="Qualification">
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-success" (click)="updInfo()">Update Info</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-outline-danger" id="btnget" (click)="openFakeDate()">Get Fake Data</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Fake Data</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>UserID</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let data of fakedData">
+                    <td>{{data.userId}}</td>
+                    <td>{{data.id}}</td>
+                    <td>{{data.title}}</td>
+                    <td>{{data.completed}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+<!-- <div class="row">
+    <div class="col-md-12">
+
+        <input type="file" ng2FileSelect [uploader]="uploader" id="myfile" name="myfile">
+        <label for="myfile"></label>
+        <button type="button" class="btn btn-success" (click)="onUpload()">Upload the file</button>
+    </div>
+</div> -->
+
+<!-- <div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-success" (click)="viewImages()">View All Images</button>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-outline-dark" id="getBank" (click)="getBankDetailTableView()">Get Bank Detail</button>
+        <h2>Table View</h2>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-12">
+        <table class="table" id="schemaTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th *ngFor="let schemaName of schema">{{schemaName.name}}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let sdata of dataSchema">
+                    <td>{{sdata.REFERENCE_ID}}</td>
+                    <td>{{sdata.ACCOUNT_NUMBER}}</td>
+                    <td>{{sdata.CURRENT_ACCOUNT_TYPE}}</td>
+                    <td>{{sdata.ACCOUNT_NAME}}</td>
+                    <td>{{sdata.CURRENCY_CODE}}</td>
+                    <td>{{sdata.AVL_BAL}}</td>
+                    <td>{{sdata.LEDGER_BALANCE}}</td>
+                    <td>{{sdata.EQ_AVL_BAL}}</td>
+                    <td>{{sdata.ACCOUNT_TYPE_CODE}}</td>
+                    <td>{{sdata.ACCOUNT_STATUS}}</td>
+                    <td>{{sdata.OPENING_DATE}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="card col-md-4" *ngFor="let sdata of dataSchema">
+        <h2>Bank Details</h2>
+        <div id="card">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <div class="card-header">
+                    {{cardHeader.name}} : {{sdata.ACCOUNT_NUMBER}}
+                </div>
+                <div class="card-body">
+                    {{cardFields[0].name}} : {{sdata.CURRENT_ACCOUNT_TYPE_VALUE}} <br><br>
+                    {{cardFields[1].name}} : {{sdata.ACCOUNT_NAME}}<br><br>
+                    {{cardFields[2].name}} : {{sdata.AVL_BAL}}<br><br>
+                    {{cardFields[3].name}} : {{sdata.CURRENCY_CODE}}<br><br>
+                    {{cardFields[4].name}} : {{sdata.LEDGER_BALANCE}}<br><br>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="12">
+        <!-- <h2>List View</h2> -->
+        <ul class="list-group" *ngFor="let ldata of dataSchema" id="list">
+            <li class="list-group-item" id="firstData">{{datalistView[0].name}} : {{ldata.ACCOUNT_NUMBER}} </li>
+            <li class="list-group-item">{{datalistView[1].name}} : {{ldata.ACCOUNT_NAME}}</li>
+            <li class="list-group-item">{{datalistView[2].name}} : {{ldata.AVL_BAL}}</li>
+            <li class="list-group-item">{{datalistView[3].name}} : {{ldata.LEDGER_BALANCE}}</li>
+            <li class="list-group-item">{{datalistView[4].name}} : {{ldata.EQ_AVL_BAL}}</li>
+            <li class="list-group-item">{{datalistView[5].name}} : {{ldata.OPENING_DATE}}</li>
+            <hr>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h2>Calender View</h2>
+        <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+    <div class="col-md-2"></div>
+</div>

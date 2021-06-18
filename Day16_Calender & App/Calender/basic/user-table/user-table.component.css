@@ -1,0 +1,71 @@
+h2
+{
+    margin-top: 40px;
+}
+.edit
+{
+    margin-left: 20px;
+}
+.edit 
+{
+    display: block;
+}
+#gb
+{
+    margin-left: 450px;
+}
+#ei
+{
+    margin-left: 650px;
+}
+.det
+{
+    font-size: 35px;
+    font-family:perpetua ;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#btnget
+{
+    margin-top: 30px;
+    margin-left: 800px;
+}
+#schemaTable
+{
+    margin-top: 30px;
+}
+#getBank
+{
+    margin-left: 780px;
+    margin-top: 30px;
+}
+/* #card
+{
+    width: 600px;
+    margin-left: 100px;
+} */
+.card-header
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: bisque;
+}
+#list
+{
+    width: 500px;
+    margin-left: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+#firstData
+{
+    color: red;
+}
+h2
+{
+    text-align: center;
+}
